@@ -17,7 +17,7 @@
   </head>
   <body>
 
-   <button id="authorize-button" class="btn btn-primary">Authorize</button>
+
 
    <div class="container">
       <h1>Gmail API demo</h1>
@@ -39,7 +39,6 @@
   </div>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
@@ -136,14 +135,9 @@
           '<tr>\
             <td>'+getHeader(message.payload.headers, 'From')+'</td>\
             <td>\
- // Original
- //             <a href="#message-modal-' + message.id +
- //         '" data-toggle="modal" id="message-link-' + message.id + '">' +
- //        getHeader(message.payload.headers, 'Subject') +
- //             '</a>\
-            <a href="#message-modal-' + message.id +
-                '" id="message-link-' + message.id+'">' +
-                getHeader(message.payload.headers, 'Subject') +
+               <a href="#message-modal-' + message.id +
+          '" data-toggle="modal" id="message-link-' + message.id + '">' +
+         getHeader(message.payload.headers, 'Subject') +
               '</a>\
             </td>\
             <td>'+getHeader(message.payload.headers, 'Date')+'</td>\
