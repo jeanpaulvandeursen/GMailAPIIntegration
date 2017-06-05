@@ -212,6 +212,24 @@
       }
       return '';
     }
+
+    /**
+     * Delete Message with given ID.
+     *
+     * @param  {String} userId User's email address. The special value 'me'
+     * can be used to indicate the authenticated user.
+     * @param  {String} messageId ID of Message to delete.
+     */
+
+    function deleteMessage(userId, messageId) {
+      var request = gapi.client.gmail.users.messages.delete({
+        'userId': 'me',
+        'id': messageId
+      });
+      request.execute(
+        function (resp) { });
+    }
+
   </script>
 
   <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
